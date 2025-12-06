@@ -17,5 +17,6 @@ Proyecto: Maquetación web (HTML5 + CSS3) del prototipo *FitTracker – Workout 
 - Uso de etiquetas semánticas: header, nav, main, section, article, aside, footer.
 
 ## Repositorio
-Repositorio público en GitHub: `https://github.com/TU_USUARIO/fittracker-ui`
+Repositorio público en GitHub: https://github.com/daniel-roman345/actividad-3.9.git
+
 
