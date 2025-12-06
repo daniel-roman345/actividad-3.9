@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitTracker - Workout Management</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/icons/logo.svg" alt="FitTracker logo" class="logo" />
+        <h1 class="visually-hidden">FitTracker</h1>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Entrenos</a></li>
+          <li><a href="#">Progreso</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid" id="main-content">
+    <!-- Hero / resumen -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h2 id="hero-title">Organiza tus entrenos. Mide tu progreso.</h2>
+      <p>FitTracker te ayuda a planificar y registrar tus rutinas de entrenamiento.</p>
+      <a class="btn primary" href="#workouts">Ver entrenos</a>
+    </section>
+
+    <!-- Sidebar con métricas -->
+    <aside class="dashboard" aria-label="Panel de estadísticas">
+      <article class="metric">
+        <h3>Semana</h3>
+        <p class="metric-value">4 entrenos</p>
+      </article>
+      <article class="metric">
+        <h3>Duración</h3>
+        <p class="metric-value">3h 20m</p>
+      </article>
+      <article class="metric">
+        <h3>Calorías</h3>
+        <p class="metric-value">2,300 kcal</p>
+      </article>
+    </aside>
+
+    <!-- Sección de entrenos -->
+    <section class="workouts" id="workouts" aria-labelledby="workouts-title">
+      <h2 id="workouts-title">Entrenos recientes</h2>
+
+      <ul class="workout-list">
+        <li class="workout-card">
+          <header>
+            <h3>Full Body - Fuerza</h3>
+            <time dateTime="2025-11-25">25 nov 2025</time>
+          </header>
+          <p>Sentadillas, press de banca, remo.</p>
+          <div class="meta">45 min · Intensidad: Alta</div>
+        </li>
+
+        <li class="workout-card">
+          <header>
+            <h3>Cardio HIIT</h3>
+            <time dateTime="2025-11-23">23 nov 2025</time>
+          </header>
+          <p>Sprints, saltos, circuitos.</p>
+          <div class="meta">30 min · Intensidad: Alta</div>
+        </li>
+
+        <!-- duplicar tarjetas según prototipo -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 FitTracker. Diseñado como ejercicio académico.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* Reset minimal */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+:root{
+  --container-width: 1100px;
+  --gap: 20px;
+  --primary: #0ea5a4;
+  --bg: #f7fafc;
+  --text: #111827;
+  --muted: #6b7280;
+}
+
+/* Utilidades */
+.container{
+  width: min(95%, var(--container-width));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Accessibility helper */
+.visually-hidden{
+  position: absolute !important;
+  height: 1px; width: 1px; overflow: hidden;
+  clip: rect(1px,1px,1px,1px); white-space: nowrap;
+}
+
+/* Header */
+.site-header{ background: #fff; border-bottom: 1px solid #e6eef0; }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding: 16px 0; gap:var(--gap); }
+.logo{ height:36px; width:auto; }
+
+/* Nav */
+.main-nav ul{ list-style:none; display:flex; gap:16px; align-items:center; }
+.main-nav a{ color:var(--text); text-decoration:none; font-weight:600; }
+.main-nav a:hover{ color:var(--primary); }
+
+/* Layout principal */
+.main-grid{
+  display:grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--gap);
+  padding: 32px 0;
+  align-items:start;
+  background: var(--bg);
+}
+
+/* HERO */
+.hero{ padding:24px; background: white; border-radius:8px; box-shadow: 0 1px 3px rgba(16,24,40,.03); }
+.hero h2{ font-size:1.6rem; color:var(--text); margin-bottom:8px; }
+.hero p{ color:var(--muted); margin-bottom:12px; }
+.btn.primary{
+  display:inline-block; background:var(--primary); color:white; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700;
+}
+
+/* Dashboard (sidebar) */
+.dashboard{ background:white; padding:16px; border-radius:8px; box-shadow: 0 1px 3px rgba(16,24,40,.03); }
+.metric{ margin-bottom:12px; }
+.metric h3{ font-size:.9rem; color:var(--muted); }
+.metric-value{ font-size:1.2rem; font-weight:700; color:var(--text); }
+
+/* Workouts */
+.workouts{ grid-column: 1 / 2; }
+.workout-list{ list-style:none; display:grid; gap:12px; margin-top:12px; }
+.workout-card{ background:#fff; padding:14px; border-radius:8px; border:1px solid rgba(15,23,42,.03); }
+.workout-card header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.workout-card h3{ font-size:1rem; color:var(--text); }
+.meta{ color:var(--muted); font-size:.9rem; margin-top:8px; }
+
+/* Footer */
+.site-footer{ padding:18px 0; text-align:center; color:var(--muted); background:#fff; border-top:1px solid #e6eef0; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .main-grid{ grid-template-columns: 1fr; }
+  .dashboard{ order: 2; }
+  .workouts{ order: 1; }
+  .hero{ order: 0; }
+}
